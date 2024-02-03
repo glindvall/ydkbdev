@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2024 Best Ball Helper!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>        
+    </style>
+</head>
+<body class="body">
+
+    <h1>Welcome to Best Ball Helper!<br><hr></h1>
+    <h2 id="ins">Select your first team</h2>
+    <!-- <blockquote><i><b></b></i></blockquote> -->
+    <br>
+
+    <!-- Pick the Team and display the teams image-->
+    <div class="user-team-select">
+        <select id="team1-select" onload="fetchPlayerData()" onchange="displayImage()" style="width:150px;">
+            <option value="none">Select Team...</option>
+            <option value="ARI">ARI</option>
+            <option value="ATL">ATL</option>
+            <option value="BAL">BAL</option>
+            <option value="BUF">BUF</option>
+            <option value="CAR">CAR</option>
+            <option value="CHI">CHI</option>
+            <option value="CIN">CIN</option>
+            <option value="CLE">CLE</option>
+            <option value="DAL">DAL</option>
+            <option value="DEN">DEN</option>
+            <option value="DET">DET</option>
+            <option value="GB">GB</option> 
+            <option value="HOU">HOU</option>
+            <option value="IND">IND</option>
+            <option value="JAX">JAX</option>
+            <option value="KC">KC</option>
+            <option value="LAC">LAC</option>
+            <option value="LAR">LAR</option>
+            <option value="LV">LV</option>
+            <option value="MIA">MIA</option>
+            <option value="MIN">MIN</option>
+            <option value="NE">NE</option>
+            <option value="NO">NO</option>
+            <option value="NYG">NYG</option>
+            <option value="NYJ">NYJ</option>
+            <option value="PHI">PHI</option>
+            <option value="PIT">PIT</option>
+            <option value="SEA">SEA</option>
+            <option value="SF">SF</option>
+            <option value="TB">TB</option>
+            <option value="TEN">TEN</option>
+            <option value="WSH">WSH</option> 
+        </select>
+    </div>
+    <br>
+
+    <!-- Show 3 Playoff Teams Left to right (week 17-16-15) (Need titles/headers/something)-->
+    
+    <div id="playoff-container">
+        <h2 id="playoff-title-text">Here are the teams and players you should pair with <var>Selected Team</var> </h2>
+        <div class="user-team-image" id = "user-image-container">
+            <img id="user-image" src="" alt="User Team Image" >
+        </div>
+        <div id="playoff-image-container">
+            <div class="playoff-block" id = "week17-image-container">
+                <h2 id="playoff-image-text" style="text-align: center;">Week 17</h2>
+                <img id="week17-image" src="" alt="Week 17 Opponent Image" >
+            </div>
+            <div class="playoff-block" id = "week16-image-container">
+                <h2 id="playoff-image-text2" style="text-align: center;">Week 16</h2>
+                <img id="week16-image" src="" alt="Week 16 Opponent Image" >
+            </div>
+            <div class="playoff-block" id = "week15-image-container">
+                <h2 id="playoff-image-text3" style="text-align: center;">Week 15</h2>
+                <img id="week15-image" src="" alt="Week 15 Opponent Image" >
+            </div>
+            <!-- <div class="playoff-block" id = "division1-image-container">
+                <img id="div1-image" src="" alt="Division Opponent Image" >
+            </div> -->
+        </div>  
+    </div>
+
+    <div id="player-title-text">
+        <!-- <h1>Correlated players by ADP</h1> -->
+        <input type="checkbox" id="showall" name="showall" value="showall">
+        <label for="showall">Show all players</label>
+        
+        <input type="checkbox" id="show17" name="show17" value="show17">
+        <label for="show17">Show Finals Only</label>
+        
+        <input type="checkbox" id="show16" name="show16" value="show16">
+        <label for="show16">Show 2nd Round Only</label>
+        
+        <input type="checkbox" id="show15" name="show15" value="show15">
+        <label for="show15">Show 1st Round Only</label>
+        <hr>
+    </div>
+    
+    <!-- <button id="fetchButton">Fetch Data</button> -->
+
+    <div id="dataContainer"></div>
+
+    <script src="script.js">
+    </script>
+</body>
+    
